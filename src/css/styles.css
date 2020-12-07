@@ -1,0 +1,368 @@
+/***********************************************************/
+/*                                                         */
+/*         Comun a todas las páginas                       */
+/*                                                         */
+/***********************************************************/
+@import "@fortawesome/fontawesome-free/css/all.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define las variables con los diferentes colores */
+
+:root {
+  --color_principal: #306291;
+  --color_fondo_footer: #181a21;
+  --color_subrayado: #1695a2;
+  --color_enlace_hover: #0f5961;
+  --color_cuerpo: #edeff1;
+  --color_fondo_header_footer: rgb(2, 58, 80);
+  --color_texto_menu_header: lightgray;
+  --color_texto_menu_header_hover: white;
+  --color_fondo_oscuro: rgba(69, 141, 209, 0.5);
+  --color_fondo_claro: rgba(92, 172, 247, 0.2);
+  --color_texto: #1f1f11;
+  --color_contraste: #d9645d;
+  --color_enlace_main: #14c9da;
+}
+
+html {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+article,
+p,
+a {
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  background-color: #d3dae4;
+  max-width: 100vw;
+  height: 170px;
+}
+
+.cabecera a {
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+}
+
+.titulo-header {
+  font-size: 2.7rem;
+  color: white;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 15px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: var(--color_fondo_footer);
+  max-width: 100vw;
+  height: 100px;
+}
+
+.footer p {
+  font-size: 12px;
+}
+
+/* Genera una sombra de la imagen a la que se aplica la clase */
+.img-sombra {
+  margin: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Breadcrum Menu Global*/
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+ul.breadcrumb li {
+  display: inline;
+}
+ul.breadcrumb li + li:before {
+  padding: 5px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: var(--color_subrayado);
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: var(--color_enlace_hover);
+  text-decoration: underline;
+}
+
+/********************************************************************/
+
+.cuerpo {
+  height: 100vh;
+  background-color: var(--color_cuerpo);
+  align-items: center;
+}
+/*********************************************************************/
+/*                                                                   */
+/*                 CSS fichero index.html                            */
+/*                                                                   */
+/*********************************************************************/
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #edeff1;
+  max-width: 95vw;
+}
+
+/*********************************************************************/
+/*                                                                   */
+/*                 CSS fichero categoria.html                       */
+/*                                                                   */
+/*********************************************************************/
+
+.categoria-th {
+  margin: 10px;
+}
+
+.img-categoria-th {
+  display: block;
+  margin: auto;
+}
+
+.subrayado {
+  border-top: 2px solid var(--color_subrayado);
+  width: 20%;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+.lista-libros {
+  display: block;
+  background-color: var(--color_cuerpo);
+  max-width: 55vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.libro {
+  display: flex;
+  align-items: baseline;
+  margin: 20px;
+}
+
+.libro-portada-datos {
+  margin: auto;
+  flex: 0 0 30%;
+}
+
+.enlace-detalle {
+  margin: auto;
+}
+
+.titulo {
+  color: red;
+  margin-left: 5px;
+}
+
+.autor {
+  font-size: 0.6rem;
+  margin-left: 5px;
+}
+
+.resumen-corto {
+  margin: auto 20px auto auto;
+  flex: 0 0 70%;
+}
+
+.titulo-enlaces-libros {
+  text-align: center;
+}
+
+.subrayado-largo {
+  border-top: 1px solid var(--color_subrayado);
+  width: 90%;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+
+
+
+
+
+/*********************************************************************/
+/*                                                                   */
+/*                 CSS fichero detalle.html                          */
+/*                                                                   */
+/*********************************************************************/
+
+
+.container-detalle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--color_cuerpo);
+  max-width: 85vw;
+  margin: 20px auto 20px auto;
+}
+
+.portada {
+  margin: 20px auto 20px auto;
+}
+
+.texto-libro {
+  margin: 20px auto 20px auto;
+  flex: 0 0 55%;
+}
+.enlaces-libros-categoria {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color_cuerpo);
+  max-width: 80vw;
+  align-self: center;
+  margin: 20px auto 20px auto;
+}
+
+.enlaces-libros {
+  display: block;
+  margin: auto;
+}
+
+.img-th {
+  margin: 5px;
+}
+
+.parrafo-resumen {
+  padding: 5px 0px 5px 0;
+  font-weight: normal;
+}
+.videoLibro {
+  display: block;
+  margin: 15px auto 15px auto;
+  width: 560px;
+  height: 315px;
+}
+
+/******************************************************/
+/*                                                    */
+/*   Adapatación responsive de la web                 */
+/*                                                    */
+/******************************************************/
+
+/* Dispositivo móvil hasta 640 px*/
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  .libro {
+    flex-wrap: wrap;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .autor {
+    text-align: center;
+  }
+
+  .videoLibro {
+    display: block;
+    margin: 5px auto 5px auto;
+    width: 373px;
+    height: 210px;
+  }
+}
+/* Dispositivo tablet entre 640px y 1024px*/
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .resumen-corto {
+    margin: auto 20px auto auto;
+    flex: 0 0 60%;
+  }
+  
+
+  .libro-portada-datos {
+    margin: auto;
+    flex: 0 0 40%;
+  }
+}
+
+/* Dispositivo con pantalla mayor de  1024px*/
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"><!-- do not remove this line! -->
+    <title>Detalle libro</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <a href="./index.html">
+            <h1 class="titulo-header">Mis libros favoritos</h1>
+        </a>
+    </header>
+    <ul class="breadcrumb">
+        <li><a href="./index.html"><i class="fas fa-home fa-2x"></i></a></li>
+        <li><a id="enlace-categoria" href=""></a></li>
+    </ul>
+
+
+    <section class="container-detalle">
+        <img id="portada" class="portada" src="img/blanco.jpg">
+        <div id="texto-libro" class="texto-libro">
+            <h2 id="titulo"></h2>
+            <h3 id="autor"></h3>
+            <article id="resumen"></article>
+        </div>
+    </section>
+    <iframe id="video" class="videoLibro" src="" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <h4 id="titulo-enlaces-libros" class="titulo-enlaces-libros">Otros libros en Novela Negra/Thriller</h4>
+    <section id="enlaces-libros-categoria" class="enlaces-libros-categoria">
+        <div class="enlaces-libros"><a href="#"><img class="img-th" src="img/blanco.jpg" alt="blanco"></a></div>
+    </section>
+    <footer class="footer">
+        <p>La imágenes de las portadas y resúmenes se han obtenido de Google Books y La Casa del Libro.</p>
+    </footer>
+    <script src="./script/detalle.js"></script>
+</body>
+
+
+</html>
