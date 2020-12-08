@@ -24,9 +24,12 @@
         <li><a id="enlace-categoria" href=""></a></li>
     </ul>
     <div class="imagen-inicio">
-        <img src="img/dom-4477481_1152.jpg" alt="Catedral"
-            srcset="img/dom-4477481_494.jpg 494w, img/dom-4477481_730.jpg 730w, img/dom-4477481_1152.jpg 1152w"
-            sizes="(max-width: 512px) 95vw, (max-width: 900px) 70vw, 30vw">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="img/dom-4477481_1152.jpg">
+            <source media="(min-width: 768px)" srcset="img/dom-4477481_730.jpg">
+            <source media="(min-width: 420px)" srcset="img/dom-4477481_420.jpg">
+            <img src="img/dom-4477481_730.jpg" alt="Imagen catedral">
+        </picture>
     </div>
     <section>
         <div>
