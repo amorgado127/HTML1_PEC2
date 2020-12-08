@@ -13,7 +13,7 @@
 
 :root {
   --color_principal: #306291;
-  --color_fondo_footer: #181a21;
+  --color_fondo_footer: white;
   --color_subrayado: #1695a2;
   --color_enlace_hover: #0f5961;
   --color_cuerpo: #edeff1;
@@ -104,7 +104,6 @@ img {
 }
 
 .footer {
-  margin-top: 15px;
   display: block;
   align-items: center;
   text-align: center;
@@ -112,12 +111,19 @@ img {
   background-color: var(--color_fondo_footer);
   max-width: 100vw;
   height: 100px;
+  margin-top: 15px;
 }
 
 .footer p {
   font-size: 12px;
 }
 
+.footer-superior {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
 /* Genera una sombra de la imagen a la que se aplica la clase */
 .img-sombra {
   margin: 10px;
@@ -262,17 +268,11 @@ ul.breadcrumb li a:hover {
   align-content: center;
 }
 
-
-
-
-
-
 /*********************************************************************/
 /*                                                                   */
 /*                 CSS fichero detalle.html                          */
 /*                                                                   */
 /*********************************************************************/
-
 
 .container-detalle {
   display: flex;
@@ -321,6 +321,39 @@ ul.breadcrumb li a:hover {
   height: 315px;
 }
 
+.imagen-inicio {
+  display:block;
+
+}
+
+.imagen-inicio img {
+  display:block;
+  margin: auto;
+  /*max-width: 40%;
+  height: auto;*/
+}
+.clipImg {
+  clip-path: polygon(
+    10% 90%,
+    10% 30%,
+    20% 30%,
+    20% 40%,
+    25% 40%,
+    25% 35%,
+    32% 35%,
+    32% 50%,
+    38% 50%,
+    38% 25%,
+    45% 25%,
+    45% 30%,
+    48% 26%,
+    58% 85%,
+    54% 90%,
+    45% 30%,
+    45% 90%
+  );
+}
+
 /******************************************************/
 /*                                                    */
 /*   Adapatación responsive de la web                 */
@@ -358,12 +391,11 @@ ul.breadcrumb li a:hover {
   html {
     font-size: 16px;
   }
-  
+
   .resumen-corto {
     margin: auto 20px auto auto;
     flex: 0 0 60%;
   }
-  
 
   .libro-portada-datos {
     margin: auto;
@@ -377,3 +409,15 @@ ul.breadcrumb li a:hover {
     font-size: 18px;
   }
 }
+/*
+.spotlight-enter-active { animation: 2s spotlight reverse; }
+.spotlight-leave-active { animation: 2s spotlight; }
+
+@keyframes spotlight {
+  0% { clip-path: circle(100% at 50% 50%); }
+  25% { clip-path: circle(20% at 50% 50%); }
+  50% { clip-path: circle(20% at 12% 84%); }
+  75% { clip-path: circle(20% at 93% 51%); }
+  100% { clip-path: circle(20% at -30% 20%); }
+}
+*/
