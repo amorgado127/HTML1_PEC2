@@ -254,6 +254,7 @@ window.onload = function () {
 
   const imagenLibro = document.getElementById("portada");
   imagenLibro.src = libro[0].imagenGrande;
+  imagenLibro.alt = "El título del libro es " + libro[0].titulo;
 
   const tituloLibro = document.getElementById("titulo");
   tituloLibro.textContent = libro[0].titulo;
@@ -289,13 +290,13 @@ window.onload = function () {
         enlaceActual.href = "./detalle.html?isbn=" + libro.isbn;
         const imagenActual = divActual.getElementsByTagName("img")[0];
         imagenActual.src = libro.imagenPequeña;
-        imagenActual.alt = "El título del libor es " + libro.titulo;
+        imagenActual.alt = "El título del libro es " + libro.titulo;
       } else {
         const div = document.createElement("div");
         const enlace = document.createElement("a");
         enlace.href = "./detalle.html?isbn=" + libro.isbn;
         const imagen = document.createElement("img");
-        imagen.alt = "El título del libor es " + libro.titulo;
+        imagen.alt = "El título del libro es " + libro.titulo;
         imagen.src = libro.imagenPequeña;
         imagen.className = "img-th";
         enlace.appendChild(imagen);
