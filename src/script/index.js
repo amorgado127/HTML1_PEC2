@@ -1,4 +1,3 @@
-
 window.onload = function () {
   const data = {
     categorias: [
@@ -32,31 +31,30 @@ window.onload = function () {
       },
     ],
   };
-  
+
   const categorias = document.getElementById("container");
-  var primero=true;
+  var primero = true;
   data.categorias.forEach((dato) => {
-   if(primero){  // La primea categoria ya está en el HTML y sólo hay que actualizar sus datos
-     primero=false;
-     const imagen=categorias.getElementsByClassName("img-sombra");
-     imagen[0].src=dato.imagen;
-     imagen[0].alt="Categoría de libros "+dato.nombre;
-     const enlace=categorias.getElementsByClassName("categoria");
-     enlace[0].href=dato.enlace;
-
-   }else{
-
-    const div = document.createElement("div");
-    const enlaceCategoria = document.createElement("a");
-    const imagenCategoria = document.createElement("img");
-    imagenCategoria.className = "img-sombra";
-    imagenCategoria.src = dato.imagen;
-    imagenCategoria.alt="Categoría de libros "+dato.nombre;
-    enlaceCategoria.href = dato.enlace;
-    enlaceCategoria.appendChild(imagenCategoria);
-    div.appendChild(enlaceCategoria);
-    div.className = "categoria";
-    categorias.appendChild(div);
-   }
+    if (primero) {
+      // La primea categoria ya está en el HTML y sólo hay que actualizar sus datos
+      primero = false;
+      const imagen = categorias.getElementsByClassName("img-sombra");
+      imagen[0].src = dato.imagen;
+      imagen[0].alt = "Categoría de libros " + dato.nombre;
+      const enlace = categorias.getElementsByClassName("categoria");
+      enlace[0].href = dato.enlace;
+    } else {
+      const div = document.createElement("div");
+      const enlaceCategoria = document.createElement("a");
+      const imagenCategoria = document.createElement("img");
+      imagenCategoria.className = "img-sombra img-categoria";
+      imagenCategoria.src = dato.imagen;
+      imagenCategoria.alt = "Categoría de libros " + dato.nombre;
+      enlaceCategoria.href = dato.enlace;
+      enlaceCategoria.appendChild(imagenCategoria);
+      div.appendChild(enlaceCategoria);
+      div.className = "categoria";
+      categorias.appendChild(div);
+    }
   });
 };
