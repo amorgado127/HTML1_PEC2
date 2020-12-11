@@ -4,6 +4,9 @@
 /*                                                         */
 /***********************************************************/
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -41,29 +44,29 @@ html {
 h1 {
   text-align: center;
   font-size: 2.2rem;
-  font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 
 h2 {
   text-align: center;
   font-size: 1.7rem;
-  font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 h3 {
   text-align: center;
   font-size: 1.3rem;
-  font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 h4 {
   text-align: center;
   font-size: 1rem;
-  font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 article,
@@ -71,6 +74,7 @@ p,
 a {
   font-size: 0.8rem;
   font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 img {
@@ -104,7 +108,6 @@ img {
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
   text-transform: uppercase;
   text-shadow: 0 8px 9px #b19260, 0px -2px 1px #fff;
-  font-weight: bold;
   letter-spacing: -2px;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -140,7 +143,6 @@ img {
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
   text-transform: uppercase;
   text-shadow: 0 8px 9px #b19260, 0px -2px 1px #fff;
-  font-weight: bold;
   letter-spacing: -2px;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -331,12 +333,16 @@ ul.breadcrumb li a:hover {
 /*********************************************************************/
 
 .container-detalle {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: block;
   background-color: var(--color_cuerpo);
-  max-width: 85vw;
+  max-width: 75vw;
   margin: 20px auto 20px auto;
+}
+
+.detalle-libro{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .portada {
@@ -345,8 +351,9 @@ ul.breadcrumb li a:hover {
 
 .texto-libro {
   margin: 20px auto 20px auto;
-  flex: 0 0 55%;
+  flex: 0 0 50%;
 }
+
 .enlaces-libros-categoria {
   display: flex;
   justify-content: space-around;
@@ -368,7 +375,6 @@ ul.breadcrumb li a:hover {
 
 .parrafo-resumen {
   padding: 5px 0px 5px 0;
-  font-weight: normal;
 }
 .videoLibro {
   display: block;
@@ -508,6 +514,10 @@ ul.breadcrumb li a:hover {
     font-size: 18px;
   }
 }
+
+/****************************************************************************** */
+/*                              Animaciones                                     */
+/****************************************************************************** */
 
 .img-animacion {
   display: block;
