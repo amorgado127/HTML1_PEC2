@@ -6,6 +6,11 @@ window.onload = function () {
         nombre: "Novela Histórica",
         imagen: "./img/novela_historica_large.png",
         imagen_th: "./img/novela_historica_th.png",
+        imagen_800: "img/dom-4477481_800.jpg",
+        imagen_600: "img/dom-4477481_600.jpg",
+        imagen_400: "img/dom-4477481_400.jpg",
+        imagen_img: "img/dom-4477481_600.jpg",
+        alt: "Imagen Catedral",
         enlace: "./categoria.html?categoria=0",
       },
       {
@@ -13,6 +18,15 @@ window.onload = function () {
         nombre: "Novela Negra y Thriller",
         imagen: "./img/novela_negra_large.png",
         imagen_th: "./img/novela_negra_th.png",
+        imagen_800:
+          "img/crime-3956945_800.jpg",
+        imagen_600:
+          "img/crime-3956945_600.jpg",
+        imagen_400:
+          "img/crime-3956945_400.jpg",
+        imagen_img:
+          "img/crime-3956945_600.jpg",
+        alt: "Crimen",
         enlace: "./categoria.html?categoria=1",
       },
       {
@@ -20,6 +34,11 @@ window.onload = function () {
         nombre: "Ciencia Ficción",
         imagen: "./img/ciencia_ficcion_large.png",
         imagen_th: "./img/ciencia_ficcion_th.png",
+        imagen_800: "",
+        imagen_600: "",
+        imagen_400: "",
+        imagen_img: "",
+        alt: "",
         enlace: "#",
       },
       {
@@ -27,6 +46,11 @@ window.onload = function () {
         nombre: "Fantasía",
         imagen: "./img/fantasia_large.png",
         imagen_th: "./img/fantasia_th.png",
+        imagen_800: "",
+        imagen_600: "",
+        imagen_400: "",
+        imagen_img: "",
+        alt: "",
         enlace: "#",
       },
     ],
@@ -38,20 +62,44 @@ window.onload = function () {
     if (primero) {
       // La primea categoria ya está en el HTML y sólo hay que actualizar sus datos
       primero = false;
-      const imagen = categorias.getElementsByClassName("img-sombra");
-      imagen[0].src = dato.imagen;
-      imagen[0].alt = "Categoría de libros " + dato.nombre;
+      const imgCategorias = document.getElementById("picture-categorias");
+      const imgNoCompatible = imgCategorias.getElementsByTagName("img")[0];
+      imgNoCompatible.src = dato.imagen;
+      imgNoCompatible.alt = "Categoría de libros " + dato.nombre;
       const enlace = categorias.getElementsByClassName("categoria");
       enlace[0].href = dato.enlace;
+      const imgGrande = document.createElement("source");
+      imgGrande.media = "(min-width: 768px)";
+      imgGrande.srcset = dato.imagen;
+      imgGrande.className = "img-sombra img-categoria";
+      const imgTh = document.createElement("source");
+      imgTh.media = "(max-width: 767px)";
+      imgTh.srcset = dato.imagen_th;
+      imgTh.className = "img-sombra img-categoria";
+      imgCategorias.insertBefore(imgGrande, imgNoCompatible);
+      imgCategorias.insertBefore(imgTh, imgNoCompatible);
+
     } else {
       const div = document.createElement("div");
       const enlaceCategoria = document.createElement("a");
-      const imagenCategoria = document.createElement("img");
-      imagenCategoria.className = "img-sombra img-categoria";
-      imagenCategoria.src = dato.imagen;
-      imagenCategoria.alt = "Categoría de libros " + dato.nombre;
+      const pictureCategoria = document.createElement("picture");
+      const imgNoCompatible = document.createElement("img");
+      const imgGrande = document.createElement("source");
+      imgGrande.media = "(min-width: 768px)";
+      imgGrande.srcset = dato.imagen;
+      imgGrande.className = "img-sombra img-categoria";
+      const imgTh = document.createElement("source");
+      imgTh.media = "(max-width: 767px)";
+      imgTh.srcset = dato.imagen_th;
+      imgTh.className = "img-sombra img-categoria";
+      imgNoCompatible.src = dato.imagen;
+      imgNoCompatible.alt = "Categoría de libros " + dato.nombre;
+      imgNoCompatible.className = "img-sombra img-categoria";
+      pictureCategoria.appendChild(imgGrande);
+      pictureCategoria.appendChild(imgTh);
+      pictureCategoria.appendChild(imgNoCompatible);
       enlaceCategoria.href = dato.enlace;
-      enlaceCategoria.appendChild(imagenCategoria);
+      enlaceCategoria.appendChild(pictureCategoria);
       div.appendChild(enlaceCategoria);
       div.className = "categoria";
       categorias.appendChild(div);

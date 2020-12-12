@@ -104,14 +104,22 @@ img {
 
 .titulo-header {
   display: block;
-  color: white;
+  color: rgb(14, 196, 241);
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 3px 0 black, 0 4px 0 black,
-    0 5px 0 black, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
-  animation: titulo 1s ease infinite alternate;
+  text-shadow: 
+  1px 0 0 black,
+  2px  0 0 black,
+  3px 0 0 black,
+  4px 0 0 black,
+  5px 0 0 black,
+  6px 0 0 transparent,
+  7px 0 0 transparent,
+  8px 0 0 transparent,
+  9px 0 0 transparent,
+  10px 0 8px rgba(0, 0, 0, 0.6);
+  animation: titulo 1.5s ease infinite alternate;
 }
 
 .footer {
@@ -137,15 +145,22 @@ img {
 }
 
 .titulo-footer {
-  color: rgb(146, 46, 46);
+  color:  rgb(14, 196, 241);
   display: block;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 3px 0 black, 0 4px 0 black,
-    0 5px 0 black, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
-  animation: titulo 0.9s ease infinite alternate;
+  text-shadow:  1px 0 0 black,
+  2px  0 0 black,
+  3px 0 0 black,
+  4px 0 0 black,
+  5px 0 0 black,
+  6px 0 0 transparent,
+  7px 0 0 transparent,
+  8px 0 0 transparent,
+  9px 0 0 transparent,
+  10px 0 8px rgba(0, 0, 0, 0.6);
+  animation: titulo 1.5s ease infinite alternate;
 }
 
 /* Genera una sombra de la imagen a la que se aplica la clase */
@@ -569,12 +584,20 @@ ul.breadcrumb li a:hover {
   }
 }
 /* Animación título   */
+
 @keyframes titulo {
   100% {
-    top: -30px;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
-      0 30px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+     -1px 0 0 black,
+     -2px 0 0 black,
+     -3px 0 0 black,
+     -4px 0 0 black,
+     -5px 0 0 black,
+     -6px 0 0 black,
+     -7px 0 0 black,
+     -8px 0 0 black,
+     -9px 0 0 black,
+    20px 0 20px #bbb;
   }
-
 }
+
