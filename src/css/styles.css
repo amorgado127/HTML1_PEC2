@@ -5,8 +5,6 @@
 /***********************************************************/
 
 @import "@fortawesome/fontawesome-free/css/all.css";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -51,21 +49,21 @@ h1 {
 
 h2 {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 h3 {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 h4 {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -108,17 +106,9 @@ img {
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  text-shadow: 
-  1px 0 0 black,
-  2px  0 0 black,
-  3px 0 0 black,
-  4px 0 0 black,
-  5px 0 0 black,
-  6px 0 0 transparent,
-  7px 0 0 transparent,
-  8px 0 0 transparent,
-  9px 0 0 transparent,
-  10px 0 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 0 0 black, 2px 0 0 black, 3px 0 0 black, 4px 0 0 black,
+    5px 0 0 black, 6px 0 0 transparent, 7px 0 0 transparent, 8px 0 0 transparent,
+    9px 0 0 transparent, 10px 0 8px rgba(0, 0, 0, 0.6);
   animation: titulo 1.5s ease infinite alternate;
 }
 
@@ -145,21 +135,14 @@ img {
 }
 
 .titulo-footer {
-  color:  rgb(14, 196, 241);
+  color: rgb(14, 196, 241);
   display: block;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  text-shadow:  1px 0 0 black,
-  2px  0 0 black,
-  3px 0 0 black,
-  4px 0 0 black,
-  5px 0 0 black,
-  6px 0 0 transparent,
-  7px 0 0 transparent,
-  8px 0 0 transparent,
-  9px 0 0 transparent,
-  10px 0 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 0 0 black, 2px 0 0 black, 3px 0 0 black, 4px 0 0 black,
+    5px 0 0 black, 6px 0 0 transparent, 7px 0 0 transparent, 8px 0 0 transparent,
+    9px 0 0 transparent, 10px 0 8px rgba(0, 0, 0, 0.6);
   animation: titulo 1.5s ease infinite alternate;
 }
 
@@ -224,8 +207,8 @@ ul.breadcrumb li a:hover {
     52% 15%,
     57% 15%,
     57% 25%,
-    60% 22%,
-    75% 87%,
+    61% 23%,
+    76% 88%,
     72% 90%,
     57% 25%,
     57% 90%,
@@ -354,6 +337,7 @@ ul.breadcrumb li a:hover {
   background-color: var(--color_cuerpo);
   max-width: 75vw;
   margin: 20px auto 20px auto;
+  padding: 5px;
 }
 
 .detalle-libro {
@@ -403,17 +387,17 @@ ul.breadcrumb li a:hover {
 .imagen-inicio {
   display: block;
   margin: auto;
-  max-width: 60%;
+  max-width: 80%;
   height: auto;
 }
-
+.imagen-libro {
+  margin: 15px auto 15px auto;
+}
 .imagen-ref-libro {
   display: block;
   margin: auto;
-  /* max-width: 70%;
-  height: auto;*/
-  margin-top: 10px;
-  margin-bottom: 10px;
+  max-width: 90%;
+  height: auto;
 }
 
 /******************************************************/
@@ -430,7 +414,7 @@ ul.breadcrumb li a:hover {
     background-color: orange;
   }
 
-  .subrayado{
+  .subrayado {
     width: 45%;
   }
   .resumen-corto {
@@ -471,7 +455,7 @@ ul.breadcrumb li a:hover {
     background-color: green;
   }
 
-  .subrayado{
+  .subrayado {
     width: 40%;
   }
 
@@ -493,11 +477,11 @@ ul.breadcrumb li a:hover {
     font-size: 16px;
     background-color: blueviolet;
   }
-  
-  .subrayado{
+
+  .subrayado {
     width: 35%;
   }
-  
+
   .resumen-corto {
     margin: auto 20px auto auto;
     flex: 0 0 60%;
@@ -517,7 +501,7 @@ ul.breadcrumb li a:hover {
     background-color: black;
   }
 
-  .subrayado{
+  .subrayado {
     width: 25%;
   }
   .resumen-corto {
@@ -545,7 +529,7 @@ ul.breadcrumb li a:hover {
 .img-animacion {
   display: block;
   margin: 10px auto 10px auto;
-  animation: sombra-circulo 2s infinite;
+  animation: sombra-circulo 5s infinite;
 }
 /* Animación imegen libros en página principal*/
 @keyframes sombra-circulo {
@@ -568,36 +552,27 @@ ul.breadcrumb li a:hover {
     clip-path: circle(50% at center);
   }
   60% {
-    clip-path: circle(55% at center);
+    clip-path: circle(60% at center);
   }
   70% {
-    clip-path: circle(55% at center);
+    clip-path: circle(70% at center);
   }
   80% {
-    clip-path: circle(55% at center);
+    clip-path: circle(80% at center);
   }
   90% {
-    clip-path: circle(55% at center);
+    clip-path: circle(90% at center);
   }
   100% {
-    clip-path: circle(55% at center);
+    clip-path: circle(100% at center);
   }
 }
 /* Animación título   */
 
 @keyframes titulo {
   100% {
-    text-shadow: 
-     -1px 0 0 black,
-     -2px 0 0 black,
-     -3px 0 0 black,
-     -4px 0 0 black,
-     -5px 0 0 black,
-     -6px 0 0 black,
-     -7px 0 0 black,
-     -8px 0 0 black,
-     -9px 0 0 black,
-    20px 0 20px #bbb;
+    text-shadow: -1px 0 0 black, -2px 0 0 black, -3px 0 0 black, -4px 0 0 black,
+      -5px 0 0 black, -6px 0 0 black, -7px 0 0 black, -8px 0 0 black,
+      -9px 0 0 black, 20px 0 20px #bbb;
   }
 }
-

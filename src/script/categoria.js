@@ -308,8 +308,8 @@ window.onload = function () {
       const imagen = document.getElementsByClassName("img-portada-th");
       imagen[0].src = libro.imagenPequeña;
       imagen[0].alt = "Libro de título: " + libro.titulo;
-      const resumen = document.getElementsByClassName("resumen-corto");
-      resumen[0].textContent = libro.resumen_corto;
+      const resumen = document.getElementById("resumen-corto");
+      resumen.textContent = libro.resumen_corto;
     } else {
       // Genera los libros siguientes
       const listaLibros = document.getElementById("lista-libros");
@@ -331,15 +331,17 @@ window.onload = function () {
       autorNuevo.textContent = libro.autor;
       autorNuevo.className = "autor";
 
-      const article = document.createElement("article");
-      article.textContent = libro.resumen_corto;
-      article.className = "resumen-corto";
+      const divResumen = document.createElement("div");
+      divResumen.className = "resumen-corto";
+      const pResumen=document.createElement("p");
+      pResumen.textContent=libro.resumen_corto;
       enlaceNuevo.appendChild(imagenNuevo);
       div2.appendChild(enlaceNuevo);
       div2.appendChild(tituloNuevo);
       div2.appendChild(autorNuevo);
       div1.appendChild(div2);
-      div1.appendChild(article);
+      divResumen.appendChild(pResumen);
+      div1.appendChild(divResumen);
       listaLibros.appendChild(div1);
       if (index<(numLibros-1)) {
         divSubrayado = document.createElement("div");
